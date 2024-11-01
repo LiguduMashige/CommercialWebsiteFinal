@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.getElementById('navbar');
 
     // Define the base path dynamically depending on whether we're on GitHub Pages or not
-    const base = window.location.pathname.includes('Spider-Man_2572598_Website') ? '/Spider-Man_2572598_Website/' : '/';
+    const base = window.location.pathname.includes('CommercialWebsiteFinal') ? '/CommercialWebsiteFinal/' : '/';
 
     // Store pages in an array with the base path prepended to links
     const pages = [
