@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    color: #ffffff;
+}
+
+nav {
+    background-color: black;  /* Dark background for the nav bar */
+    overflow: hidden;           /* Ensure proper layout for floating elements */
+    padding: 10px 3%;            /* Some padding for spacing */
+    white-space: nowrap;        /* Prevent wrapping of links to new lines */
+    display: flex;              /* Use Flexbox for positioning */
+    justify-content: space-between;  /* Create space between the logo and nav links */
+    align-items: center;        /* Vertically center logo and nav items */
+    position: sticky;
+    top: 0; /* It will stick at the top of the page */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+nav ul {
+    list-style: none;           /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex;              /* Display list items in a row */
+    justify-content: flex-end;  /* Align the nav items to the right */
+}
+
+nav li {
+    margin: 0 10px;             /* Add space between each list item */
+}
+
+nav a {
+    display: inline-block;      /* Makes the links behave like buttons */
+    color: rgb(255, 255, 255);  /* White text color */
+    text-align: center;         /* Center text within the links */
+    padding: 14px 20px;         /* Padding around each link */
+    text-decoration: none;      /* Remove underlines */
+    font-size: 18px;            /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+
+/* Hover effect for the links */
+nav a:hover {
+    background-color: #dd3939;  /* Light background on hover */
+    color: rgb(233, 233, 233);  /* Change text color on hover */
+}
+
+/* Active/current page link styling */
+nav a.active {
+    background-color: #4CAF50; /* Highlight the active link */
+    color: rgb(169, 167, 167);
+}
+
+/* Styling for smaller screens (responsive) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul {
+        flex-direction: column;  /* Stack the links vertically */
+        text-align: right;       /* Align the links to the right */
+    }
+
+    nav li {
+        margin: 10px 0;         /* Adjust margin for vertical alignment */
+    }
+
+    nav a {
+        padding: 10px;          /* Adjust padding for smaller screens */
+    }
+}
